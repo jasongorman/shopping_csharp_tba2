@@ -29,4 +29,12 @@ public class BasketTotalTest
         basket.Add(new Item(1, 25.0));
         Assert.That(basket.Total, Is.EqualTo(75.0));
     }
+
+    [Test]
+    public void TotalOfSingleItemWIthQuantityOfTwo()
+    {
+        Basket basket = new Basket();
+        basket.Add(new Item(2, 50.0));
+        Assert.That(basket.Total, Is.EqualTo(100.0));
+    }
 }

@@ -2,10 +2,17 @@
 
 public class Item
 {
-    public double Price { get; }
+    private int Quantity { get; }
+    private double Price { get; }
 
     public Item(int quantity, double price)
     {
+        Quantity = quantity;
         Price = price;
+    }
+
+    public double Subtotal()
+    {
+        return Price * Quantity;
     }
 }

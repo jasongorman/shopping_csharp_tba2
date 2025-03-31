@@ -3,7 +3,7 @@
 public class Basket
 {
     private readonly List<Item> _items = new();
-    public double Total => _items.Sum(item => item.Price);
+    public double Total => _items.Sum(item => item.Subtotal());
 
     public void Add(Item item)
     {
