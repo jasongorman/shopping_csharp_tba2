@@ -2,11 +2,11 @@
 
 public class Basket
 {
-    private Item _item;
-    public double Total => _item is null? 0.0 : 100.0;
+    private readonly List<Item> _items = new();
+    public double Total => _items.Sum(item => item.Price);
 
     public void Add(Item item)
     {
-        _item = item;
+        _items.Add(item);
     }
 }
